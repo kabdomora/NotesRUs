@@ -1,11 +1,9 @@
 const express = require('express');
 const path = require('path');
 const notes = require('./routes/notes');
-const router = require('express').Router();
-
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 
 app.use(express.json());
@@ -16,12 +14,6 @@ app.use('/api', notes);
 app.use(express.static('public'));
 
 
-app.get('/', (req, res) =>
-res.sendFile(path.join(__dirname, '/public/index.html')));
-// get homepage
 
-app.get('/notes', (req, res) =>
-res.sendFile(path.join(__dirname, '/public/notes.html')));
-// get notes page
 
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
