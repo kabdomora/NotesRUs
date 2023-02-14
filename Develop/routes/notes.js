@@ -1,7 +1,7 @@
 // routes for api calls for notes data recall
 
 const note = require('express').Router();
-const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
+const { readAndAppend, readFromFile, writeToFile } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 // import helpers and express router
 
@@ -57,3 +57,4 @@ note.delete('/notes/:id', (req, res) => {
 });
 // delete a note
 
+module.exports = note;
