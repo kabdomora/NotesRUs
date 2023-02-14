@@ -24,7 +24,7 @@
   * Find me on Github: [kabdomora](http://github.com/kabdomora)
   * For additional feedback, email me at [kaylabrown@mednet.ucla.edu](mailto:kaylabrown@mednet.ucla.edu)
 
-  [!Homepage](Homepage.JPG)
-  [!New](New.JPG)
-  [!Save-New](SaveNew.JPG)
-  [!Selected](Selected.JPG)
+  ![Homepage](Homepage.JPG)
+  ![New](New.JPG)
+  ![Save-New](SaveNew.JPG)
+  ![Selected](Selected.JPG)
