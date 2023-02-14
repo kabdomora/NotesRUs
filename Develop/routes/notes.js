@@ -1,4 +1,4 @@
-// routes for api calls for notes recall
+// routes for api calls for notes data recall
 
 const note = require('express').Router();
 const { readAndAppend, readFromFile } = require('../helpers/fsUtils');

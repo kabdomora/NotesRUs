@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const notes = require('./routes/notes');
 const htmlRoutes = require('./routes/htmlRoutes');
+const router = require('express').Router();
 
 
 const app = express();
