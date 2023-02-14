@@ -5,10 +5,10 @@ const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 // import helpers and express router
 
-note.get('/', (req, res) => readFromFile('./db/note.json').then((data) => res.json(JSON.parse(data))));
+note.get('/notes', (req, res) => readFromFile('./db/note.json').then((data) => res.json(JSON.parse(data))));
 // get route to recall saved notes to sidebar
 
-note.get('/:id', (req, res) => {
+note.get('/notes/:id', (req, res) => {
     const savedNote = req.params.id;
     readFromFile('./db/note.json')
         .then((data) => JSON.parse(data))
@@ -21,7 +21,7 @@ note.get('/:id', (req, res) => {
 });
 // return a single note to the display panel
 
-note.post('/', (req, res) => {
+note.post('/notes', (req, res) => {
     const { title, text, id } = req.body;
 
     if ( title && text ) {
@@ -45,7 +45,7 @@ note.post('/', (req, res) => {
 });
 // add a new note to storage
 
-note.delete('/:id', (req, res) => {
+note.delete('/notes/:id', (req, res) => {
     const savedNote = req.params.id;
     readFromFile('./db/note.json')
         .then((data) => JSON.parse(data))
